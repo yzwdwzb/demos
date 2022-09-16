@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘制形状</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <canvas id="can" width="200" height="200"></canvas>
+    <script>
+        let can = document.getElementById('can')
+        if(can.getContext){
+            let ctx = can.getContext('2d');
+            //绘制一个填充的矩形
+            ctx.fillRect(10,10,50,50)
+            //绘制一个矩形的边框
+            ctx.strokeRect(5,5,60,60)
+            // 清除指定矩形区域，让清除部分完全透明
+            ctx.clearRect(20,20,20,20)
+        }
+    </script>
+</body>
+</html>

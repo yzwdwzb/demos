@@ -1,0 +1,43 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{ 
+    height: 100%;
+}
+
+#nav{ 
+    height: 40px;
+    width: 100px;
+    position: fixed;
+    top: 0;
+}
+
+#nav a {
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    padding-left: 10px;
+    text-decoration: none;
+}
+#nav div {
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid black;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+#content {
+    position: fixed;
+    font-size: 16px;
+    left: 120px;
+}

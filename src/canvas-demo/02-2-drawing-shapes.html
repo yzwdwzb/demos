@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘制形状</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="draw()">
+    <canvas id="can" width="200" height="200"></canvas>
+    <script>
+        function draw() {
+            let can = document.getElementById('can')
+            if (can.getContext) {
+                let ctx = can.getContext('2d');
+                // 图左1 创建路径起始点
+                ctx.beginPath();
+                ctx.moveTo(35, 50)
+                //画出路径
+                ctx.lineTo(35, 150);
+                ctx.lineTo(5, 75);
+                //填充
+                ctx.fill()
+
+                //图左2
+                ctx.beginPath();
+                ctx.moveTo(95, 50)
+                ctx.lineTo(95, 150);
+                ctx.lineTo(65, 75);
+                //封闭路径
+                ctx.closePath()
+                //描边
+                ctx.stroke()
+
+                //图左3
+                ctx.beginPath();
+                ctx.moveTo(155, 50)
+                ctx.lineTo(155, 150);
+                ctx.lineTo(125, 75);
+                //描边
+                ctx.stroke()
+            }
+        }
+    </script>
+</body>
+
+</html>

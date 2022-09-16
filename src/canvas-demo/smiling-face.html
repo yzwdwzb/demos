@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>笑脸</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="draw()">
+    <canvas id="can" width="200" height="200"></canvas>
+    <script>
+        function draw() {
+            let can = document.getElementById('can')
+            if (can.getContext) {
+                let ctx = can.getContext('2d');
+                // 图左1 创建路径起始点
+                ctx.beginPath();
+                ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 绘制
+                ctx.moveTo(110, 75);
+                ctx.arc(75, 75, 35, 0, Math.PI, false);   // 口 (顺时针)
+                ctx.moveTo(65, 65);
+                ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // 左眼
+                ctx.moveTo(95, 65);
+                ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右眼
+                ctx.stroke();
+
+            }
+        }
+    </script>
+</body>
+
+</html>

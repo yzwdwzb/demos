@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时钟</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onload="draw()">
+    <canvas id="clock" width="500" height="500"></canvas>
+
+    <script>
+        function draw(){
+            let ctx = document.getElementById('clock').getContext('2d')
+            ctx.beginPath();
+            ctx.arc(250,250,200,0,Math.PI*2,true)
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.moveTo(260,250)
+            ctx.arc(250,250,10,0,Math.PI*2,true)
+            ctx.fill()
+        }
+    </script>
+</body>
+</html>
